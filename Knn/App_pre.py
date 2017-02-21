@@ -24,10 +24,12 @@ class App_pre:
                 ice_list .append(float(elements[2]))
                 mark_list.append(self.mark_enum[elements[3]])
                 self.ori_data_list=[fly_list,game_list,ice_list]
+            f.close()
             return (self.ori_data_list,mark_list)
         except FileNotFoundError:
             print("ERROR 2901:file_name not found")
             os.system("pause")
+
     def rescale(self,rescale_lists):
         """
         inplace operation

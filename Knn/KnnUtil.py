@@ -23,7 +23,6 @@ class KnnUtil:
 
     def find_NearestTag_KthNearst(self, point_a, point_list, point_tag_list, dims=2, K=10):
         """
-
         point_a:    需要判定的点
         point_list: 已经标注过的点
         point_tag_list:已经标注过的点的标注结果 与point_list按照索引一一对应 tag 应当是一个可比较的对象
