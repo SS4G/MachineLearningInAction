@@ -1,4 +1,4 @@
-from KnnUtil import KnnUtil
+from KnnUtil import *
 from config import *
 from App_pre import *
 class AppointmentTest:
@@ -7,6 +7,6 @@ class AppointmentTest:
         self.pre=App_pre()
         pass
     def main_test(self):
-        self.pre.read_set()
+        ori_data_set,=self.pre.read_set()
         self.knntool.find_NearestTag_KthNearst()
 
