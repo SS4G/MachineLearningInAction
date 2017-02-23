@@ -28,7 +28,7 @@ class App_pre:
             return (self.ori_data_list,mark_list)
         except FileNotFoundError:
             print("ERROR 2901:file_name not found")
-            os.system("pause")
+            #os.system("pause")
 
     def rescale(self,rescale_lists):
         """
