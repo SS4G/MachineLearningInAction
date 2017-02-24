@@ -2,6 +2,7 @@
 from KnnUtil   import *
 from NumberPre import *
 import NumberConfig as n_cfg
+import matplotlib.pyplot as plt
 class NumTest:
     def __init__(self):
         self.Npre=NumberPre()
@@ -22,7 +23,8 @@ class NumTest:
         print(len(self.Npre.test_cases))
         print(len(self.Npre.train_cases))
         for index in xrange(length):
-            print(index," case tested","error",error)
+            if  index%200==0:
+                print(index," case tested"," error ",error)
             res=self.KnnTool.find_NearestTag_KthNearst(self.Npre.test_cases[index][0],train_vec_list, train_tag_list, dims=1024,K=n_cfg.K )
             if res!=self.Npre.test_cases[index][1]:
                 error+=1
@@ -30,4 +32,15 @@ class NumTest:
         return float(error)/float(length)
 if __name__=="__main__":
     s=NumTest()
-    print(s.testbench())
+    rate_list=[]
+    K_list=[]
+    for i in xrange(1800):
+         error_rate=s.testbench()
+         print(error_rate,"with K=",n_cfg.K)
+         rate_list.append(error_rate)
+         K_list.append(n_cfg.K)
+         n_cfg.K+=100
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.scatter(K_list[:], rate_list[:])
+    plt.show()
