@@ -34,7 +34,7 @@ if __name__=="__main__":
     s=NumTest()
     rate_list=[]
     K_list=[]
-    for i in xrange(1800):
+    for i in xrange(18):
          error_rate=s.testbench()
          print(error_rate,"with K=",n_cfg.K)
          rate_list.append(error_rate)
