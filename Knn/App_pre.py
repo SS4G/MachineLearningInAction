@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 import matplotlib
 class App_pre:
@@ -12,7 +13,7 @@ class App_pre:
         :return:
         """
         try :
-            f=open(file_name,"r",encoding="utf-8")
+            f=open(file_name,"r")
             fly_list =[]
             game_list=[]
             ice_list =[]
@@ -24,10 +25,12 @@ class App_pre:
                 ice_list .append(float(elements[2]))
                 mark_list.append(self.mark_enum[elements[3]])
                 self.ori_data_list=[fly_list,game_list,ice_list]
+            f.close()
             return (self.ori_data_list,mark_list)
-        except FileNotFoundError:
+        except IOError:
             print("ERROR 2901:file_name not found")
-            os.system("pause")
+            #os.system("pause")
+
     def rescale(self,rescale_lists):
         """
         inplace operation
@@ -36,8 +39,9 @@ class App_pre:
         """
         for i in rescale_lists:
             scale=max(i)-min(i)
-            for val in i :
-                val=val/scale
+            i_length=len(i)
+            for index in range(i_length):
+                i[index]=i[index]/scale
 
 
 
