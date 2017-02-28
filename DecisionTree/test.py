@@ -1,6 +1,6 @@
 from math import log
 import matplotlib.pyplot as plt
-N=10
-P=1.0/N
-print(-N*P*log(P,2))
-
+a=[1,2,3,4,5]
+b=map(lambda d:d+1,a)
+print(b)
+print(a)
