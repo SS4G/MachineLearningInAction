@@ -1,10 +1,14 @@
 from math import log
 import matplotlib.pyplot as plt
-#a=[1,2,3]
-#b=a
-#print(id(a),id(b))
-#a=[4,6,7]
-#print(id(a),id(b))
+# fig = plt.figure()
+# ax = fig.add_subplot(111)
+# ax.scatter([1,2,3,4,5], [6,7,8,9,0])
+# plt.show()
+a=[1,2,3]
+b=[4,5,6]
+a.extend(b)
+print(a)
+"""
 class Node:
     def __init__(self,val):
         self.val=val
@@ -34,3 +38,4 @@ print(t.l.l.val)#d
 print(t.l.r.val)#e
 print(t.l.r.val)#f
 print(t.l.r.val)#g
+"""
