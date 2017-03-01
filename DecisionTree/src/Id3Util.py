@@ -51,7 +51,7 @@ class Id3Util:
         data_set_size=len(data_set)
         entropy=0.0
         for vector in data_set:
-            self.addbykey(tag_dict,data_set[-1])
+            self.addbykey(tag_dict,vector[-1])
         for tag in tag_dict:
             pn=float(tag_dict[tag])/data_set_size
             entropy+= -pn*log(pn,2)#以2为底
@@ -85,7 +85,8 @@ class Id3Util:
         return map(lambda vec:vec[:attr].extend(vec[attr+1:]),filter(lambda vec:vec[attr]==val,dataset))
 
     def is_data_set_pure(self,dataset):
-        dataset_tags=map(lambda vec:vec[-1]==dataset[0][-1],dataset)
+        stdtag=dataset[0][-1]
+        dataset_tags=map(lambda vec:vec[-1]==stdtag,dataset)
         return reduce(lambda x,y:x and y,dataset_tags)# 所有标签都一致返回True 否则返回 False
 
     def create_tree(self,dataset):

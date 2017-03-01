@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d162ea8-e873-4254-b9e6-be217dc0f5fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecisionTree/src/dec_tree_config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DecisionTree/src/tools.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DecisionTree/resource/driver_licesse.txt" afterPath="$PROJECT_DIR$/DecisionTree/resource/driver_license.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTree/test.py" afterPath="$PROJECT_DIR$/DecisionTree/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTree/resource/driver_license.txt" afterPath="$PROJECT_DIR$/DecisionTree/resource/driver_license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py" afterPath="$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DecisionTree/src/Id3Util.py" afterPath="$PROJECT_DIR$/DecisionTree/src/Id3Util.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +25,8 @@
             <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/DecisionTree/src/tools.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="357">
-                    <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+                  <state relative-caret-position="168">
+                    <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
                     <folding>
                       <element signature="e#15#44#0" expanded="true" />
                     </folding>
@@ -49,19 +47,15 @@
             <file leaf-file-name="Id3Util.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/DecisionTree/src/Id3Util.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="462">
-                    <caret line="111" column="19" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="19" />
+                  <state relative-caret-position="1111">
+                    <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="60" />
                     <folding>
                       <element signature="e#15#35#0" expanded="true" />
                       <element signature="e#92#588#0" expanded="false" />
                       <element signature="e#697#701#0" expanded="false" />
                       <element signature="e#745#969#0" expanded="false" />
-                      <element signature="e#1054#1796#0" expanded="false" />
-                      <element signature="e#1847#2701#0" expanded="false" />
-                      <element signature="e#2768#3007#0" expanded="false" />
-                      <element signature="e#3057#3198#0" expanded="false" />
-                      <element signature="e#3243#4194#0" expanded="false" />
-                      <element signature="e#4247#4607#0" expanded="false" />
+                      <element signature="e#2766#3005#0" expanded="false" />
+                      <element signature="e#4267#4627#0" expanded="false" />
                     </folding>
                   </state>
                 </provider>
@@ -78,11 +72,21 @@
       <file leaf-file-name="DecisionTreeTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
               <folding>
                 <element signature="e#15#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="driver_license.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DecisionTree/resource/driver_license.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,6 +99,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addbykey</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,6 +137,8 @@
         <option value="$PROJECT_DIR$/DecisionTree/test.py" />
         <option value="$PROJECT_DIR$/DecisionTree/src/dec_tree_config.py" />
         <option value="$PROJECT_DIR$/DecisionTree/src/tools.py" />
+        <option value="$PROJECT_DIR$/DecisionTree/resource/driver_license.txt" />
+        <option value="$PROJECT_DIR$/DecisionTree/src/Id3Util.py" />
         <option value="$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py" />
       </list>
     </option>
@@ -544,9 +555,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1145" y="441" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17322405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17322405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842106" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -574,7 +585,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DecisionTree/src/Id3Util.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DecisionTree/src/Id3Util.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -767,14 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DecisionTree/resource/driver_license.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTree/test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -793,16 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DecisionTree/src/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <element signature="e#15#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTree/src/dec_tree_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -811,29 +816,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DecisionTree/src/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#15#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTree/src/Id3Util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="111" column="19" lean-forward="true" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="19" />
+        <state relative-caret-position="1111">
+          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="60" />
           <folding>
             <element signature="e#15#35#0" expanded="true" />
             <element signature="e#92#588#0" expanded="false" />
             <element signature="e#697#701#0" expanded="false" />
             <element signature="e#745#969#0" expanded="false" />
-            <element signature="e#1054#1796#0" expanded="false" />
-            <element signature="e#1847#2701#0" expanded="false" />
-            <element signature="e#2768#3007#0" expanded="false" />
-            <element signature="e#3057#3198#0" expanded="false" />
-            <element signature="e#3243#4194#0" expanded="false" />
-            <element signature="e#4247#4607#0" expanded="false" />
+            <element signature="e#2766#3005#0" expanded="false" />
+            <element signature="e#4267#4627#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DecisionTree/resource/driver_license.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DecisionTree/src/DecisionTreeTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
           <folding>
             <element signature="e#15#37#0" expanded="true" />
           </folding>
