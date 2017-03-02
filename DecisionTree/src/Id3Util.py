@@ -100,19 +100,19 @@ class Id3Util:
         :param dataset:
         :return:
         """
-
         if self.is_data_set_pure(dataset):  # 递归结束条件 - 所有数据集处于一个类别的tag中
             return DecisionNode(nodetype="Leaf", tag=dataset[0][-1])
         elif len(dataset[0]) == 1:   # 所有的特征都消耗完了
             return DecisionNode(nodetype="Leaf", tag=dataset[0][-1])  # ---Todo 需要实现多数表决
         # 从数据集中选出当前信息增益最大的属性的下标
         best_split_attr = self.choose_best_attr(dataset)
-        attr_set = set([vec[best_split_attr] for vec in dataset])
+        attr_set = set([vec[best_split_attr] for vec in dataset])#获取最最佳划分属性中的所有可能属性值
         new_datasets = []
         attr_val_dict = {}
-        for attr_val in attr_set:
+        for attr_val in attr_set:#切分出最佳属性中对应属性值的数据集合
             new_datasets.append((self.split_data_set(dataset, attr=best_split_attr, val=attr_val),attr_val))
         for new_set in new_datasets:
+            #print(new_set[1])
             attr_val_dict[new_set[1]] = self.create_tree(new_set[0])  # 将用对应attr_val生成的树添加到当前树的字典中
         return DecisionNode(nodetype="Tree",split_attr_index=best_split_attr,split_attr_dict=attr_val_dict)
 
@@ -120,18 +120,27 @@ class Id3Util:
         tmp_tree=dec_tree
         vector_copy=[]
         vector_copy[:]=vector[:]#创建一个原始向量的副本 不要修改他
+        tmp_vec=[]
         while tmp_tree.nodetype!="Leaf":
-            tmp_tree=tmp_tree.split_attr_dict[vector_copy[tmp_tree.split_attr_index]]
-            vector_copy[:tmp_tree.split_attr_index].extend(vector_copy[tmp_tree.split_attr_index+1:])
+            tmp_vec = []
+
+            new_tree = tmp_tree.split_attr_dict[vector_copy[tmp_tree.split_attr_index]]
+
+            tmp_vec=vector_copy[:tmp_tree.split_attr_index]
+            tmp_vec.extend(vector_copy[tmp_tree.split_attr_index+1:])
+            vector_copy=tmp_vec
+            tmp_tree=new_tree
         return tmp_tree.tag
 
-    def show_tree(self,indent,tree_root):
+    def show_tree(self,topkey,indent,tree_root):
         if tree_root.nodetype=="Leaf":
+            print indent*"\t"+"top key:",topkey
             print(indent*"\t"+tree_root.tag)
         else:
+            print indent*"\t"+"top key:",topkey
+            print(indent * "\t" + str(tree_root.split_attr_index) + " brach=" + str(tree_root.split_attr_dict.keys()))
             for key in tree_root.split_attr_dict:
-                print(indent*"\t"+str(tree_root.split_attr_index))
-                self.show_tree(indent+1,tree_root.split_attr_dict[key])
+                self.show_tree(topkey=key,indent=indent+1,tree_root=tree_root.split_attr_dict[key])
 if __name__ == '__main__':
     test_set=[
                ["a","1","^","tag0"],
