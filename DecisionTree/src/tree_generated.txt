@@ -1,0 +1,30 @@
+top key: root
+3 brach=['reduced', 'normal']
+	top key: reduced
+	no-lenses
+	top key: normal
+	2 brach=['yes', 'no']
+		top key: yes
+		1 brach=['hyper', 'myope']
+			top key: hyper
+			0 brach=['pre', 'presbyopic', 'young']
+				top key: pre
+				no-lenses
+				top key: presbyopic
+				no-lenses
+				top key: young
+				hard
+			top key: myope
+			hard
+		top key: no
+		0 brach=['pre', 'presbyopic', 'young']
+			top key: pre
+			soft
+			top key: presbyopic //????
+			0 brach=['hyper', 'myope']
+				top key: hyper
+				soft
+				top key: myope
+				no-lenses
+			top key: young
+			soft
