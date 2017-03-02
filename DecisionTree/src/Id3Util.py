@@ -100,6 +100,7 @@ class Id3Util:
         :param dataset:
         :return:
         """
+
         if self.is_data_set_pure(dataset):  # 递归结束条件 - 所有数据集处于一个类别的tag中
             return DecisionNode(nodetype="Leaf", tag=dataset[0][-1])
         elif len(dataset[0]) == 1:   # 所有的特征都消耗完了
@@ -113,7 +114,7 @@ class Id3Util:
             new_datasets.append((self.split_data_set(dataset, attr=best_split_attr, val=attr_val),attr_val))
         for new_set in new_datasets:
             attr_val_dict[new_set[1]] = self.create_tree(new_set[0])  # 将用对应attr_val生成的树添加到当前树的字典中
-            return DecisionNode(nodetype="Tree",split_attr_index=best_split_attr,split_attr_dict=attr_val_dict)
+        return DecisionNode(nodetype="Tree",split_attr_index=best_split_attr,split_attr_dict=attr_val_dict)
 
     def sort_vector(self, vector, dec_tree=None):
         tmp_tree=dec_tree
@@ -121,9 +122,16 @@ class Id3Util:
         vector_copy[:]=vector[:]#创建一个原始向量的副本 不要修改他
         while tmp_tree.nodetype!="Leaf":
             tmp_tree=tmp_tree.split_attr_dict[vector_copy[tmp_tree.split_attr_index]]
-            vector_copy=vector_copy[:tmp_tree.split_attr_index].extend(vector_copy[tmp_tree.split_attr_index+1:])
+            vector_copy[:tmp_tree.split_attr_index].extend(vector_copy[tmp_tree.split_attr_index+1:])
         return tmp_tree.tag
 
+    def show_tree(self,indent,tree_root):
+        if tree_root.nodetype=="Leaf":
+            print(indent*"\t"+tree_root.tag)
+        else:
+            for key in tree_root.split_attr_dict:
+                print(indent*"\t"+str(tree_root.split_attr_index))
+                self.show_tree(indent+1,tree_root.split_attr_dict[key])
 if __name__ == '__main__':
     test_set=[
                ["a","1","^","tag0"],
