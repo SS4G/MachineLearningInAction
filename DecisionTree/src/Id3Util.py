@@ -103,7 +103,14 @@ class Id3Util:
         if self.is_data_set_pure(dataset):  # 递归结束条件 - 所有数据集处于一个类别的tag中
             return DecisionNode(nodetype="Leaf", tag=dataset[0][-1])
         elif len(dataset[0]) == 1:   # 所有的特征都消耗完了
-            return DecisionNode(nodetype="Leaf", tag=dataset[0][-1])  # ---Todo 需要实现多数表决
+            tags=[vec[-1] for vec in dataset]
+            tags.sort()
+            fea_dict={}
+            for tag in tags:
+                self.addbykey(fea_dict,tag)
+            k_v=[(key,fea_dict[key]) for key in fea_dict]
+            sorted_kv=sorted(k_v,key=itemgetter(1))
+            return DecisionNode(nodetype="Leaf", tag=sorted_kv[-1][0])  # ---Todo 需要实现多数表决
         # 从数据集中选出当前信息增益最大的属性的下标
         best_split_attr = self.choose_best_attr(dataset)
         attr_set = set([vec[best_split_attr] for vec in dataset])#获取最最佳划分属性中的所有可能属性值
