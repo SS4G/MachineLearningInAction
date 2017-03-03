@@ -110,7 +110,7 @@ class Id3Util:
                 self.addbykey(fea_dict,tag)
             k_v=[(key,fea_dict[key]) for key in fea_dict]
             sorted_kv=sorted(k_v,key=itemgetter(1))
-            return DecisionNode(nodetype="Leaf", tag=sorted_kv[-1][0])  # ---Todo 需要实现多数表决
+            return DecisionNode(nodetype="Leaf", tag=sorted_kv[-1][0])  # ---Todo 需要测试多数表决
         # 从数据集中选出当前信息增益最大的属性的下标
         best_split_attr = self.choose_best_attr(dataset)
         attr_set = set([vec[best_split_attr] for vec in dataset])#获取最最佳划分属性中的所有可能属性值
