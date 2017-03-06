@@ -52,6 +52,8 @@ class TreePloter:
             if next_objs==None:
                 return 0
             if level==0:
+                return 1#only for root to get here
+            if level==1:#只询问下一级
                 return len(next_objs)
             else :
                 sums=0
@@ -78,11 +80,12 @@ if __name__=="__main__":
                         {"n22": null},
                         {"n23": null}
                     ]
-                    },
-
+                    }
+                    ,
                     {"n12": [
                         {"n24": null},
-                        {"n25": null}
+                        {"n25": null},
+                        {"n26": null}
                     ]
                     }
 
