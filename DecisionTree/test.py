@@ -1,5 +1,30 @@
-import numpy as np
-class G:
-    def __str__(self):
-        return "44400000"
-print(G())
+import json
+a="""
+{"n00": [
+    {"n10": [
+        {"n20": 34},
+        {"n21": 35}
+    ]
+    },
+
+    {"n11": [
+        {"n22": 36},
+        {"n23": 37}
+    ]
+    },
+
+    {"n12": [
+        {"n24": 38},
+        {"n25": 39}
+    ]
+    }
+
+]
+}
+"""
+b=9
+len(b)
+#x=json.dumps(P())
+#print(x)
+#print(x["n00"])
+#print(type(x["n00"][0]["n10"][0]["n20"]))
